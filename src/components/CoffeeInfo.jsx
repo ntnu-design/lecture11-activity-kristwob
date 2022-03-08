@@ -18,6 +18,9 @@ function getCoffeeStatus(minutesSinceBrewed) {
         case (minutesSinceBrewed >= COLD_MINUTES):
             status = "Cold"
             break;
+        default:
+            status = "Unknown"
+            break;
     }
 
     return status;
@@ -40,7 +43,7 @@ const CoffeeInfo = (props) => {
 
 
     const diff = moment().diff(brewedAt, 'minutes');
-    console.log("dif - ", diff);
+    //console.log("dif - ", diff);
     //Less than 90' -> hot
     //90' to 150' -> warm
     // >150' -> cold

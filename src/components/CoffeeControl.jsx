@@ -1,9 +1,28 @@
-import React, { Component } from 'react';
-import CoffeeButton from './CoffeeButton';
-import './CoffeeControl.css';
-import Thermos from './Thermos';
+import React from "react";
+import CoffeeButton from "./CoffeeButton";
+import Thermos from "./Thermos";
+import "./CoffeeControl.css";
 
-class CoffeeControl extends Component {
+export default function CoffeeControl({ litersBrewed, onClick }) {
+  return (
+    <div className="CoffeeControl">
+      <Thermos litersBrewed={litersBrewed} />
+
+      <div className="flex-columns">
+        <CoffeeButton litersToBrew="2.2" onClick={onClick} />
+        <CoffeeButton litersToBrew="1.1" onClick={onClick} />
+        <CoffeeButton litersToBrew="0.5" onClick={onClick} />
+      </div>
+    </div>
+  );
+}
+
+CoffeeControl.defaultProps = {
+    litersBrewed: '2.2',
+    onClick: () => {}
+}
+
+/* class CoffeeControl extends Component {
     constructor(props) {
         super(props);
         //Careful! This is an anti-pattern (more in the future)
@@ -30,6 +49,6 @@ class CoffeeControl extends Component {
             </div>
         );
     }
-}
+} */
 
-export default CoffeeControl;
+//export default CoffeeControl;
