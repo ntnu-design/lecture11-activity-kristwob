@@ -5,7 +5,7 @@ const CoffeeButton = ({litersToBrew, onClick}) => {
     const liters = Math.min(2.2, Math.max(0, litersToBrew));
 
     const handleOnClick = () => {
-        console.log("CoffeeButton evt: ", litersToBrew);
+        //console.log("CoffeeButton evt: ", litersToBrew);
         onClick(litersToBrew);
 
     }

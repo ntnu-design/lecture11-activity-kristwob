@@ -12,8 +12,8 @@ const Thermos = ({ className, litersBrewed=2.2 }) => {
 
     const levelPercent = normalisedLevel * 96 / 2.2;
     const liquidHeighStyle = {height: levelPercent+"%"};
-    console.log(levelPercent);
-    console.log(liquidHeighStyle);
+    /* console.log(levelPercent);
+    console.log(liquidHeighStyle); */
 
     return (
         <div className={`Thermos ${className}`}>
