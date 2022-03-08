@@ -18,6 +18,9 @@ function getCoffeeStatus(minutesSinceBrewed) {
         case (minutesSinceBrewed >= COLD_MINUTES):
             status = "Cold"
             break;
+        default:
+            status = "Unknown"
+            break;
     }
 
     return status;
