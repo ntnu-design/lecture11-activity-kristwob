@@ -21,8 +21,11 @@ export default class App extends Component {
   handleClick(newLiters) {
     //console.log("Hello")
     //console.log(newLiters)
-    this.setState( {
-      litersBrewed: newLiters
+    this.setState((prev) => {
+      return {
+        litersBrewed: newLiters,
+        ...prev.onClick
+      }
     })
   }
 
